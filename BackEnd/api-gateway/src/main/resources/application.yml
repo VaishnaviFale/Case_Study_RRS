@@ -1,0 +1,33 @@
+server:
+  port: 9001
+  
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+  
+  
+spring:
+  application:
+    name: Api-gateway
+    
+  cloud:
+    gateway:
+      routes:
+      - id: Train-Reservation
+        uri: http://localhost:8091
+        predicates:
+        - Path=/orders/**
+      - id: Train-Details
+        uri: http://localhost:8090
+        predicates:
+        - Path=/search/**
+      - id: Train-Security-JWT
+        uri: http://localhost:8096
+        predicates:
+        - Path=/api/**
+       
