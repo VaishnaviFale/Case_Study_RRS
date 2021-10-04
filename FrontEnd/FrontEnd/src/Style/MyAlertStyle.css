@@ -1,0 +1,9 @@
+.selectClass {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;       /* Remove default arrow */
+    background: linear-gradient(135deg,#71b7e6,#d4a0e9);
+    height: 60%;
+    width: 100%;
+   
+ }

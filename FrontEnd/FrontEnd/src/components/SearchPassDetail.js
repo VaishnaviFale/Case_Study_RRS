@@ -1,0 +1,1 @@
+//SearchPassDetail.js
