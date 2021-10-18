@@ -48,6 +48,9 @@ ul {
 .user{
   height:90px;
 }
+.MyDiv3{
 
-
+  display:flex;
+  justify-content: space-evenly;
   
+  }

@@ -17,7 +17,7 @@ class DeleteTrain extends React.Component {
     }
 
     deleteRow(id, e) {
-        axios.delete(`http://localhost:8090/trains/delete/${id}`)
+        axios.delete(`http://localhost:8090/search/delete/${id}`)
             .then(res => {
                 console.log(res);
                 console.log(res.data);
@@ -36,7 +36,7 @@ class DeleteTrain extends React.Component {
                 <table className="table table-bordered">
                     <thead>
                         <tr>
-                            <th> TrainID </th>
+                            <th> Train Code </th>
                             <th> Train Name </th>
                             <th> Source </th>
                             <th> Destination </th>

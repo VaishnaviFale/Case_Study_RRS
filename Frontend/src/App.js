@@ -12,7 +12,7 @@ import BoardUser from "./components/board-user.component";
 import BoardModerator from "./components/board-moderator.component";
 import BoardAdmin from "./components/board-admin.component";
 
-//my cpmponents
+//my components
 
 import TrainList from "./components/TrainList";
 import CreateTrain from "./components/CreateTrain";
@@ -29,7 +29,13 @@ import AdminPortal from "./components/AdminPortal";
 import SearchingAvaliable from "./components/SearchingAvaliable";
 import AvaliableTrain2 from "./components/AvaliableTrain2";
 import MyAlert from "./components/MyAlert";
+import ThankYou from "./components/ThankYou";
+import MyReservation from "./components/MyReservation";
+import Help from "./components/Help"
+import MyReservationInfo from "./components/MyReservationInfo";
 
+//Testing
+import Button from './components/button/button';
 
 class App extends Component {
   constructor(props) {
@@ -79,6 +85,7 @@ class App extends Component {
                 Avaliable Trains
                 </Link>
                 </li>
+
                 {/* <li className="nav-item">
                 <Link to={"/searchAvaliable"} className="nav-link">
                 Search Your Train
@@ -155,6 +162,11 @@ class App extends Component {
                 </Link>
                 </li>
                 <li className="nav-item">
+                <Link to={"/help"} className="nav-link">
+                Help
+                </Link>
+                </li>
+                <li className="nav-item">
                 <a href="/login" className="nav-link" onClick={this.logOut}>
                 LogOut
                 </a>
@@ -199,14 +211,18 @@ class App extends Component {
             <Route path="/avaliabletrain" exact component={AvaliableTrain} />
             <Route path="/avaliabletrain2" exact component={AvaliableTrain2} />
             <Route path="/reservationinfo/:pnr" exact component={ReservationInfo} />
+            <Route path="/myreservationinfo/:pnr" exact component={MyReservationInfo} />
             <Route path="/delTicket" exact component={CancleReservation} />
             <Route path="/passDetail" exact component={AvaliablePass} />
             <Route path="/checkout" exact component={Checkout} />
             <Route path="/adminportal" exact component={AdminPortal} />
             <Route path="/myalert" exact component={MyAlert} />
-
-
-          </Switch>
+            <Route path="/thankyou" exact component={ThankYou} />
+            <Route path="/help" exact component={Help} />
+            <Route path="/myreservation" exact component={MyReservation} />
+            <Button/>
+            </Switch>
+         
         </div>
       </div>
     );

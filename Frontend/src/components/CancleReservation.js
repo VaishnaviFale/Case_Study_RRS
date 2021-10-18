@@ -36,12 +36,10 @@ class CancleReservation extends React.Component {
                 <table className="table table-bordered">
                     <thead>
                         <tr>
-
                             <th> Name </th>
                             <th> Gender </th>
                             <th> Age </th>
                             <th> Address </th>
-                            
                             <th> Action </th>
                         </tr>
                     </thead>

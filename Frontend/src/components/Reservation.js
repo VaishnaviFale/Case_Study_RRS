@@ -10,8 +10,8 @@ export default class Sample extends Component {
     sex: "",
     age: "",
     address: "",
-    creditno: "",
-    bank: "",
+    // creditno: "",
+    // bank: "",
     className: "",
     quantity: "",
     origin: "",
@@ -53,7 +53,7 @@ export default class Sample extends Component {
       this.setState({ address: value.toUpperCase() });
     }
   };
-  handleCreditno = event => {
+ /*  handleCreditno = event => {
     const { value } = event.target;
     if (value != null) {
       this.setState({ creditno: value.toUpperCase() });
@@ -64,7 +64,7 @@ export default class Sample extends Component {
     if (value != null) {
       this.setState({ bank: value.toUpperCase() });
     }
-  };
+  }; */
   handleClassName = event => {
     const { value } = event.target;
     if (value != null) {
@@ -104,8 +104,8 @@ export default class Sample extends Component {
       sex: this.state.sex,
       age: this.state.age,
       address: this.state.address,
-      creditno: this.state.creditno,
-      bank: this.state.bank,
+      // creditno: this.state.creditno,
+      // bank: this.state.bank,
       className: this.state.className,
       quantity: this.state.quantity,
       origin: this.state.origin,
@@ -133,8 +133,8 @@ export default class Sample extends Component {
       sex: "",
       age: "",
       address: "",
-      creditno: "",
-      bank: "",
+      // creditno: "",
+      // bank: "",
       className: "",
       quantity: "",
       origin: "",
@@ -230,7 +230,7 @@ export default class Sample extends Component {
                       />
                     </div>
 
-                    <div className="col">
+                    {/* <div className="col">
                       <label htmlFor="trainName">Credit Card Number</label>
                       <input
                         type="name" placeholder="Enter your credit card number"
@@ -251,7 +251,7 @@ export default class Sample extends Component {
                         value={this.state.bank}
                         required
                       />
-                    </div>
+                    </div> */}
                     <div className="col">
                       <label htmlFor="trainName">Class</label><br></br>
                       <select

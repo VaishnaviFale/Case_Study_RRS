@@ -14,7 +14,7 @@ class AvaliableTrain extends Component {
   }
   bookTicket = (ticket) => {
     this.props.history.push({
-      pathname: `/reservation`,
+      pathname: `/myreservation`,
       state: { ticket: ticket }
     });
     console.log(ticket)
@@ -23,7 +23,7 @@ class AvaliableTrain extends Component {
   render() {
     return (
       <div>
-        <div className="flightSearch"><br /><br />
+        <div className="trainSearch"><br /><br />
           <h2>Avaliable train for you:</h2><br />
           <table id="tbAvaliable">
             <tr>

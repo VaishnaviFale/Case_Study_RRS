@@ -8,7 +8,10 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.4",
     "bootstrap": "^5.1.1",
+    "enzyme": "^3.11.0",
     "formik": "^2.2.9",
+    "history": "^5.0.1",
+    "jest-dom": "^4.0.0",
     "lodash.get": "^4.4.2",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.3",
@@ -18,7 +21,9 @@
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
     "react-stripe-checkout": "^2.6.3",
+    "react-test-renderer": "^17.0.2",
     "react-validation": "^3.0.7",
+    "sweetalert2": "^11.1.7",
     "validator": "^13.6.0",
     "web-vitals": "^1.1.2",
     "yup": "^0.32.9"
@@ -48,6 +53,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.15.6",
+    "enzyme-adapter-react-16": "^1.15.6",
     "sass": "^1.42.1"
   }
 }

@@ -11,9 +11,8 @@ const Train = props => (
     <td> {props.train.destination} </td>
     <td> {props.train.fare} </td>
     </tr>
-  
-  
 );
+
 class TrainList extends Component {
   constructor(props) {
     super(props);
@@ -23,7 +22,7 @@ class TrainList extends Component {
   //Get the train ticket details from the database
   componentDidMount() {
     axios
-      .get("http://localhost:8090/search/findAllTrains")
+      .get("http://localhost:9001/search/findAllTrains")
       .then(response => {
         this.setState({ traintickets: response.data });
       })

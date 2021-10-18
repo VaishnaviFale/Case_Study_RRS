@@ -3,31 +3,19 @@ import axios from "axios";
 import { Redirect, Link } from "react-router-dom";
 import ReservationStyle from "../Style/ReservationStyle.css"
 
-export default class Regrestration extends Component {
+export default class MyReservation extends Component {
   state = {
-    //  id: "",
     name: "",
     sex: "",
     age: "",
     address: "",
-    creditno: "",
-    bank: "",
     className: "",
     quantity: "",
-    origin: "",
-    destination: "",
     date:"",
     isTrainCreated: false
   };
 
-  // handleTrainid = event => {
-  //   const { value } = event.target;
-  //   if (value != null) {
-  //     this.setState({ id: value.toUpperCase() });
-  //   }
-  // };
-
-
+ 
   handleName = event => { //PassengerName
     const { value } = event.target;
     if (value != null) {
@@ -53,18 +41,7 @@ export default class Regrestration extends Component {
       this.setState({ address: value.toUpperCase() });
     }
   };
-  handleCreditno = event => {
-    const { value } = event.target;
-    if (value != null) {
-      this.setState({ creditno: value.toUpperCase() });
-    }
-  };
-  handleBank = event => {
-    const { value } = event.target;
-    if (value != null) {
-      this.setState({ bank: value.toUpperCase() });
-    }
-  };
+ 
   handleClassName = event => {
     const { value } = event.target;
     if (value != null) {
@@ -76,16 +53,6 @@ export default class Regrestration extends Component {
     if (value != null) {
       this.setState({ quantity: value.toUpperCase() });
     }
-  };
-
-  handleOrigin = event => {
-    const { value } = event.target;
-    this.setState({ origin: value.toUpperCase() });
-  };
-
-  handleDestination = event => {
-    const { value } = event.target;
-    this.setState({ destination: value.toUpperCase() });
   };
   handleDate = event => {
     const { value } = event.target;
@@ -104,12 +71,8 @@ export default class Regrestration extends Component {
       sex: this.state.sex,
       age: this.state.age,
       address: this.state.address,
-      creditno: this.state.creditno,
-      bank: this.state.bank,
       className: this.state.className,
       quantity: this.state.quantity,
-      origin: this.state.origin,
-      destination: this.state.destination,
       date:this.state.date,
 
 
@@ -126,19 +89,15 @@ export default class Regrestration extends Component {
       .then(response => response)
       .catch(error => error.message);
 
-    window.alert("Your Ticket booked successfully");
+    window.alert("To confirm your booking please proceed with the payment.");
     this.setState({
       //    id: "",
       trainName: "",
       sex: "",
       age: "",
       address: "",
-      creditno: "",
-      bank: "",
       className: "",
       quantity: "",
-      origin: "",
-      destination: "",
       date:"",
 
 
@@ -147,7 +106,7 @@ export default class Regrestration extends Component {
   };
   render() {
     if (this.state.isTrainCreated) {
-      return <Redirect to="/reservationinfo/${pnr}" />;
+      return <Redirect to="/Myreservationinfo/${pnr}" />;
     }
     console.log(this.props.adminId === "");
     if (this.props.adminId === "") {
@@ -165,19 +124,6 @@ export default class Regrestration extends Component {
             <div className="card-body">
               <h5 className="card-title">
                 <form onSubmit={this.handleSubmit}>
-
-                    {/* <div className="col">
-                      <label htmlFor="trainNumber">Train Id</label>
-                      <input
-                        type="name"
-                        className="form-control"
-                        id="trainid"
-                        onChange={this.handleTrainid}
-                        value={this.state.id}
-                        required
-                      />
-                    </div> */}
-
                     <div className="col">
                       <label htmlFor="trainName">Passenger Name</label>
                       <input
@@ -229,29 +175,6 @@ export default class Regrestration extends Component {
                         required
                       />
                     </div>
-
-                    <div className="col">
-                      <label htmlFor="trainName">Credit Card Number</label>
-                      <input
-                        type="name" placeholder="Enter your credit card number"
-                        className="form-control"
-                        id="creditno"
-                        onChange={this.handleCreditno}
-                        value={this.state.creditno}
-                        required
-                      />
-                    </div>
-                    <div className="col">
-                      <label htmlFor="trainName">Bank Name</label>
-                      <input
-                        type="name" placeholder="Enter your bank name"
-                        className="form-control"
-                        id="bank"
-                        onChange={this.handleBank}
-                        value={this.state.bank}
-                        required
-                      />
-                    </div>
                     <div className="col">
                       <label htmlFor="trainName">Class</label><br></br>
                       <select
@@ -288,47 +211,6 @@ export default class Regrestration extends Component {
                       </select>
                     </div>
                   <div className="form-row">
-                    <div className="col">
-                      <label htmlFor="inputState">Source</label><br></br>
-                      <select
-                        class="browser-default custom-select mb-4"
-                        id="from"
-                        onChange={this.handleOrigin}
-                        // value={this.state.origin}
-                        required
-                      >
-                        <option value="" disabled selected>
-                          Choose option
-                        </option>
-                        <option value="KARACHI"> 	KARACHI </option>
-                        <option value="RAWALPINDI"> RAWALPINDI </option>
-                        <option value="FAISALABAD"> FAISALABAD </option>
-                        <option value="QUETTA"> QUETTA </option>
-                        <option value="MULTAN"> MULTAN </option>
-
-                      </ select>
-                    </div>
-
-                    <div className="col">
-                      <label htmlFor="inputState">Destination</label><br></br>
-                      <select
-                        class="browser-default custom-select mb-4"
-                        id="to"
-                        onChange={this.handleDestination}
-                        // value={this.state.destination}
-                        required
-                      >
-                        <option value="" disabled selected>
-                          Choose option
-                        </option>
-                        <option value="LAHORE"> LAHORE </option>
-                        <option value="QUETTA"> QUETTA </option>
-                        <option value="PESHAWAR"> PESHAWAR </option>
-                        <option value="SUBAK RAFTAR"> SUBAK RAFTAR </option>
-                        <option value="DUMDUM"> DUMDUM </option>
-
-                      </select>
-                    </div>
                     <div className="col">
                       <label htmlFor="trainName">Date</label>
                       <input

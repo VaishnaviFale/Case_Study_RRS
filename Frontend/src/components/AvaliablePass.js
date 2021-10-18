@@ -34,7 +34,6 @@ class AvaliablePass extends Component {
                             <td><b>Passenger Name</b></td>
                             <td><b>Gender</b></td>
                             <td><b>Age</b></td>
-                            <td><b>Address</b></td>
                             <td><b>Start Station</b></td>
                             <td><b>End Station</b></td>
                             {/* <td>Action</td> */}
@@ -48,7 +47,6 @@ class AvaliablePass extends Component {
                                             <td>{ticket.name}</td>
                                             <td>{ticket.sex}</td>
                                             <td>{ticket.age}</td>
-                                            <td>{ticket.address}</td>
                                             <td>{ticket.origin}</td>
                                             <td>{ticket.destination}</td>
                                             {/* <td>
@@ -60,8 +58,7 @@ class AvaliablePass extends Component {
                             }
                         </tbody>
                         <tr>
-                            <td><b>Credit Card No.</b></td>
-                            <td><b>Bank</b></td>
+                            <td><b>Address</b></td>
                             <td><b>Class Name</b></td>
                             <td><b>Number of Passenger</b></td>
                             <td><b>Date</b></td>
@@ -73,8 +70,7 @@ class AvaliablePass extends Component {
                                 this.state.tickets.map(
                                     ticket =>
                                         <tr key={ticket.id}>
-                                            <td>{ticket.creditno}</td>
-                                            <td>{ticket.bank}</td>
+                                            <td>{ticket.address}</td>
                                             <td>{ticket.className}</td>
                                             <td>{ticket.quantity}</td>
                                             <td>{ticket.date}</td>

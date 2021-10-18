@@ -4,26 +4,19 @@ import axios from "axios";
 import reservationInfoStyle from '../Style/reservationInfoStyle.css'
 
 const Train = props => (
-  <tr>
-
-
-    <td> {props.train.name} </td>
+  <tr> <td> {props.train.name} </td>
     <td> {props.train.sex} </td>
     <td> {props.train.age} </td>
     <td> {props.train.address} </td>
-    {/* <td> {props.train.creditno} </td>
-    <td> {props.train.bank} </td> */}
     <td> {props.train.className} </td>
     <td> {props.train.quantity} </td>
-    <td> {props.train.origin} </td>
-    <td> {props.train.destination} </td>
     <td> {props.train.date} </td>
-    <td> <b>{props.train.pnr} </b></td>
+    <td> <b>{props.train.pnr}</b> </td>
   </tr>
 
 
 );
-class ReservationInfo extends Component {
+class MyReservationInfo extends Component {
   constructor(props) {
     super(props);
     this.state = { details: [] };
@@ -60,12 +53,8 @@ class ReservationInfo extends Component {
               <th> Sex </th>
               <th> Age </th>
               <th> Address </th>
-              {/* <th> Credit </th>
-              <th> Bank </th> */}
               <th> classs </th>
               <th> Quantity </th>
-              <th> Origin </th>
-              <th> Destination </th>
               <th> date </th>
               <th> PNR </th>
             </tr>
@@ -95,4 +84,4 @@ class ReservationInfo extends Component {
   }
 }
 
-export default ReservationInfo;
+export default MyReservationInfo;

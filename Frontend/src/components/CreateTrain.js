@@ -58,7 +58,7 @@ export default class CreateTrain extends Component {
 
     axios
       .post(
-        "http://localhost:8090/trains/addTrain",
+        "http://localhost:8090/search/addTrain",
         newTrain
       )
       .then(response => response)
@@ -179,7 +179,7 @@ export default class CreateTrain extends Component {
                     </div>
                     <br />
                     <div>
-                      <button
+                      <button data-testid="search-button"
                         type="submit"
                         value="createTicket"
                         className="btn btn-dark btn-lg btn-block"
