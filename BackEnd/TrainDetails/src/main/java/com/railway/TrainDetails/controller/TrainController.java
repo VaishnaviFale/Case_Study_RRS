@@ -18,7 +18,7 @@ import com.railway.TrainDetails.repositories.TrainRepository;
 
 @RestController
 @CrossOrigin("http://localhost:3000") 
-@RequestMapping("/trains")
+@RequestMapping("/search")
 public class TrainController {
 
 	private TrainRepository trainRepository;
