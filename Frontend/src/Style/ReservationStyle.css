@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+   justify-content: center;
+   align-items: center;
+   background: linear-gradient(135deg,#71b7e6,#9b59b6); 
+   /* background-image:url(https://www.lebronze-alloys.com/uploads/applications/applications/images/product/tomas-anton-escobar-phyf2mcmei0-unsplash-1-1-6047723bb6076328361272.jpg); */
+
+}
+.contain{
+    max-width: 700px;
+    margin-left:25%;
+    width: 100%;
+    background: rgb(227, 161, 253);
+    padding: 25px 30px;
+    border-radius: 5px;
+    align-items: center;
+}

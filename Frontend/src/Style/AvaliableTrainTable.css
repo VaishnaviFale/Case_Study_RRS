@@ -1,0 +1,20 @@
+#tbAvaliable{
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+}
+#tbAvaliable td, #tbAvaliable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+#tbAvaliable tr:nth-child(even){background-color: #f2f2f2;}
+
+#tbAvaliable tr:hover {background-color: #ddd;}
+
+#tbAvaliable tr{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: rgb(0, 0, 0);
+}
